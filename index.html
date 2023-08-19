@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script> <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Monoton&family=Yatra+One&display=swap" rel="stylesheet">
+</head>
+<style>
+    *{
+        font-family: 'Lobster', cursive;
+font-family: 'Monoton', cursive;
+font-family: 'Yatra One', cursive;
+    }
+</style>
+<body class="bg-blue-400">
+    <div class="text-center">
+        <form class="flex flex-col w-1/2 mx-auto my-[200px] gap-4" action="">
+            <h1 class="text-2xl">Form Login Tryout App</h1>
+            <input class="username p-2 rounded-md w-1/2 mx-auto border-2 border-lime-500" type="text" placeholder="username">
+            <input class="password p-2 rounded-md w-1/2 mx-auto border-2 border-lime-500" type="password" name="" id="" placeholder="password">
+            <button class="bg-white text-sky-500 p-2 rounded-md hover:bg-lime-400 hover:text-2xl hover:shadow-md hover:text-white w-1/2 mx-auto border-2 border-lime-500">
+                <a href="soal.html">
+                    Login
+              </a>
+        </button>
+        </form>
+    </div>
+
+    <script>
+       // 1. Tangkap Data yang di Input User
+       const username = document.querySelector('.username')
+       const password = document.querySelector('.password')
+       const btn=document.querySelector('button')
+
+       // 2. Pengkondisian Dilakukan saat user menekan tombol Login
+        let x = 0
+        btn.addEventListener('click', function(e){
+            e.preventDefault()
+            if(username.value =="Nurul"){
+            if(password.value =="12345"){
+                alert('Login Kamu Berhasil!')
+                location.href = "soal.html"
+            } else{
+                alert('Password atau Username Kamu Salah Nih!')
+            }
+        }else{
+                alert('Password atau Username Kamu Salah Nih!')
+            }
+        })
+
+       // 3. Kalau benar, arahkan user ke halaman 
+       
+    </script>
+</body>
+</html>
